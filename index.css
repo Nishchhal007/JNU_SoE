@@ -1,0 +1,9 @@
+.sticky{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.light{
+    background-color: rgb(205, 224, 224);
+}
