@@ -26,7 +26,7 @@ let count = 0;
 function slideshow(){
     let array = ['pic1.jpeg', 'pic2.jpeg', 'pic3.jpeg', 'pic4.jpeg', 'pic5.jpeg'];
     setInterval(function () {
-        let i = count % 3;
+        let i = count % 5;
         image.src = array[i];
         count++;
     }, 1500);
