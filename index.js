@@ -10,7 +10,7 @@ function themeChange(){
     if(theme.classList.contains('bg-dark')){
         theme.classList.remove('bg-dark','navbar-dark');
         theme.classList.add('light','navbar-light');
-        themeBtn.innerHTML = `<button type="button" class="btn btn-light">Dark Mode<img src="moon-fill.svg" style="margin-left: 20px;"></button>`;
+        themeBtn.innerHTML = `<button type="button" class="btn btn-light" style="background-color: rgb(255,255,255);">Dark Mode<img src="moon-fill.svg" style="margin-left: 20px;"></button>`;
         jnuLogo.src = "jnu.png";
     }
     else{
