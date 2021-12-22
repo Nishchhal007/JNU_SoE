@@ -7,6 +7,7 @@ const soeText = document.getElementById("schoolOfEngineering");
 const footer = document.getElementById("footer");
 const body = document.getElementById("body");
 const bodyText = document.getElementById("bodyText");
+const footerList = document.getElementById("footerList");
 
 function themeChange(){
     let theme = document.querySelector('nav');
@@ -20,6 +21,7 @@ function themeChange(){
         footer.style.backgroundColor = "white";
         body.style.backgroundColor = "white";
         bodyText.style.color = "black";
+        footerList.style.color = "grey";
     }
     else{
         theme.classList.remove('bg-light','navbar-light');
@@ -30,6 +32,7 @@ function themeChange(){
         footer.style.backgroundColor = "rgb(40,40,40)";
         body.style.backgroundColor = "rgb(40,40,40)";
         bodyText.style.color = "white";
+        footerList.style.color = "grey";
     }
 }
 
