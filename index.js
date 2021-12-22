@@ -10,13 +10,13 @@ function themeChange(){
     if(theme.classList.contains('bg-dark')){
         theme.classList.remove('bg-dark','navbar-dark');
         theme.classList.add('light','navbar-light');
-        themeBtn.src = 'moon-fill.svg';
+        themeBtn.innerHTML = `<button type="button" class="btn btn-light">Dark Mode<img src="moon-fill.svg" style="margin-left: 20px;"></button>`;
         jnuLogo.src = "jnu.png";
     }
     else{
         theme.classList.remove('light','navbar-light');
         theme.classList.add('bg-dark','navbar-dark');
-        themeBtn.src = 'icons8-sun.svg';
+        themeBtn.innerHTML = `<button type="button" class="btn btn-dark">Light Mode<img src="icons8-sun.svg" style="margin-left: 20px;"></button>`;
         jnuLogo.src = 'jnu2.gif';
     }
 }
