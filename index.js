@@ -4,23 +4,32 @@ themeBtn.addEventListener('click',themeChange);
 
 const jnuLogo = document.getElementById("logo");
 const soeText = document.getElementById("schoolOfEngineering");
+const footer = document.getElementById("footer");
+const body = document.getElementById("body");
+const bodyText = document.getElementById("bodyText");
 
 function themeChange(){
     let theme = document.querySelector('nav');
 
-    if(theme.classList.contains('bg-dark')){
-        theme.classList.remove('bg-dark','navbar-dark');
-        theme.classList.add('light','navbar-light');
+    if(theme.classList.contains('dark')){
+        theme.classList.remove('dark','navbar-dark');
+        theme.classList.add('bg-light','navbar-light');
         themeBtn.innerHTML = `<button type="button" class="btn btn-light" style="background-color: rgb(255,255,255);">Dark Mode<img src="moon-fill.svg" style="margin-left: 8px;"></button>`;
         jnuLogo.src = "jnu.png";
         soeText.style.color = "black";
+        footer.style.backgroundColor = "white";
+        body.style.backgroundColor = "white";
+        bodyText.style.color = "black";
     }
     else{
-        theme.classList.remove('light','navbar-light');
-        theme.classList.add('bg-dark','navbar-dark');
+        theme.classList.remove('bg-light','navbar-light');
+        theme.classList.add('dark','navbar-dark');
         themeBtn.innerHTML = `<button type="button" class="btn btn-dark">Light Mode<img src="icons8-sun.svg" style="margin-left: 8px;"></button>`;
         jnuLogo.src = 'jnu2.gif';
         soeText.style.color = "white";
+        footer.style.backgroundColor = "rgb(40,40,40)";
+        body.style.backgroundColor = "rgb(40,40,40)";
+        bodyText.style.color = "white";
     }
 }
 
