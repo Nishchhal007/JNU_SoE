@@ -38,10 +38,10 @@ function themeChange(){
 let image = document.getElementById('image');
 let count = 0; 
 function slideshow(){
-    let array = ['pics/pic1.jpeg', 'pics/pic2.jpeg', 'pics/pic3.jpeg', 'pics/pic4.jpeg', 'pics/pic5.jpeg', 'pics/pic7.jpg'];
+    let array = ['pics/pic.gif', 'pics/pic1.jpeg', 'pics/pic2.jpeg', 'pics/pic3.jpeg', 'pics/pic4.jpeg', 'pics/pic5.jpeg', 'pics/pic7.jpg'];
     setInterval(function () {
-        let i = count % 6;
+        let i = count % 7;
         image.src = array[i];
         count++;
-    }, 1500);
+    }, 1800);
 }
