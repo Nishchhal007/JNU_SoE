@@ -38,9 +38,9 @@ function themeChange(){
 let image = document.getElementById('image');
 let count = 0; 
 function slideshow(){
-    let array = ['pics/pic1.jpeg', 'pics/pic2.jpeg', 'pics/pic3.jpeg', 'pics/pic4.jpeg', 'pics/pic5.jpeg', 'pics/pic7.jpeg'];
+    let array = ['pics/pic1.jpeg', 'pics/pic2.jpeg', 'pics/pic3.jpeg', 'pics/pic4.jpeg', 'pics/pic5.jpeg', 'pics/pic7.jpg'];
     setInterval(function () {
-        let i = count % 5;
+        let i = count % 6;
         image.src = array[i];
         count++;
     }, 1500);
