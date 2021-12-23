@@ -38,12 +38,26 @@
     -->
 </body>
 <script>
-    let imageLink = ['bookImages/Accelerated C++.PNG', 'bookImages/C++_Notes.PNG', 'bookImages/C++_primer.PNG'];
+    let imageLink1 = ['bookImages/Accelerated C++.PNG', 'bookImages/C++_Notes.PNG', 'bookImages/C++_primer.PNG'];
     let driveLink = ['https://drive.google.com/file/d/1_zwKU668Y0GnM472aNMZ1y8TBOO3fB7B/view?usp=sharing', 'https://drive.google.com/file/d/1qeOdkR7geiPChrtK3S8hsiAm4CGeJNFp/view?usp=sharing', 'https://drive.google.com/file/d/1ZwUo6BZq_357gsYwP7fIusBErDyur9MB/view?usp=sharing'];
+    let imageLink2 = [];
+    let youtubeLink = [];
 
-    imageLink.forEach(function (element, index) {
+    imageLink1.forEach(function (element, index) {
         let newBookCard = document.getElementById("newBookCard");
-        newBookCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-image: url('bg/bg2.jpeg'); background-size: cover;">
+        newBookCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-image: url('bg/bg1.jpeg'); background-size: cover;">
+        <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
+        <div class="card-body my-3 ">
+            
+            <a href="${driveLink[index]}"
+                class="btn btn-primary" style="font-family: monospace;" target="_blank">Download Now</a>
+        </div>
+    
+    </div>`;
+    })
+    imageLink2.forEach(function (element, index) {
+        let newLecCard = document.getElementById("newLecCard");
+        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-image: url('bg/bg2.jpeg'); background-size: cover;">
         <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
         <div class="card-body my-3 ">
             
