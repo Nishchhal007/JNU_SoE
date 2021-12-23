@@ -8,7 +8,6 @@ const footer = document.getElementById("footer");
 const body = document.getElementById("body");
 const bodyText = document.getElementById("bodyText");
 const footerList = document.getElementById("footerList");
-
 function themeChange(){
     let theme = document.querySelector('nav');
 
@@ -39,7 +38,7 @@ function themeChange(){
 let image = document.getElementById('image');
 let count = 0; 
 function slideshow(){
-    let array = ['pic1.jpeg', 'pic2.jpeg', 'pic3.jpeg', 'pic4.jpeg', 'pic5.jpeg'];
+    let array = ['/pics/pic1.jpeg', '/pics/pic2.jpeg', '/pics/pic3.jpeg', '/pics/pic4.jpeg', '/pics/pic5.jpeg', '/pics/pic6.jpeg'];
     setInterval(function () {
         let i = count % 5;
         image.src = array[i];
