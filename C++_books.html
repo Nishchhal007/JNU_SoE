@@ -22,7 +22,7 @@
     <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;">
         C++ Programming Lectures</h3>
     <div id="newLecCard" class="row container-fluid">
-        <!-- <div id="newLecCard"> </div> -->
+
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -38,12 +38,11 @@
     -->
 </body>
 <script>
-    let imageLink1 = ['bookImages/Accelerated_C++.PNG', 'bookImages/C++_Notes.PNG', 'bookImages/C++_primer.PNG'];
+    let imageLink = ['bookImages/Accelerated_C++.PNG', 'bookImages/C++_Notes.PNG', 'bookImages/C++_primer.PNG'];
     let driveLink = ['https://drive.google.com/file/d/1_zwKU668Y0GnM472aNMZ1y8TBOO3fB7B/view?usp=sharing', 'https://drive.google.com/file/d/1qeOdkR7geiPChrtK3S8hsiAm4CGeJNFp/view?usp=sharing', 'https://drive.google.com/file/d/1ZwUo6BZq_357gsYwP7fIusBErDyur9MB/view?usp=sharing'];
-    let imageLink2 = [];
-    let youtubeLink = [];
 
-    imageLink1.forEach(function (element, index) {
+
+    imageLink.forEach(function (element, index) {
         let newBookCard = document.getElementById("newBookCard");
         newBookCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-image: url('bg/bg1.jpeg'); background-size: cover;">
         <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
@@ -55,18 +54,26 @@
     
     </div>`;
     })
-    imageLink2.forEach(function (element, index) {
+
+    //Lec Card
+    let lecImageLink = ['lecImages/learninglad.jpeg', 'lecImages/cwh.jpeg', 'lecImages/apnacollege.jpeg'];
+    let lecDriveLink = ['https://youtube.com/playlist?list=PLfVsf4Bjg79Cu5MYkyJ-u4SyQmMhFeC1C', 'https://youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL', 'https://youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ'];
+
+    lecImageLink.forEach(function (element, index) {
         let newLecCard = document.getElementById("newLecCard");
-        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-image: url('bg/bg2.jpeg'); background-size: cover;">
-        <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
-        <div class="card-body my-3 ">
-            
-            <a href="${driveLink[index]}"
-                class="btn btn-primary" style="font-family: monospace;" target="_blank">Download Now</a>
-        </div>
-    
-    </div>`;
+        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%;background-color: white; background-size: cover;">
+            <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
+            <div class="card-body my-3 ">
+                
+                <a href="${lecDriveLink[index]}"
+                class="btn btn-primary" style="font-family: monospace;" target="_blank"><center>Watch Now</center></a>
+                </div>
+                
+                </div>`;
+
     })
+
+
 </script>
 
 </html>
