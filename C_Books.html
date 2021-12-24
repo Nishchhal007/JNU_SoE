@@ -19,6 +19,8 @@
     <div id="newBookCard" class="row container-fluid">
 
     </div>
+
+
     <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;">
         C Programming Lectures</h3>
     <div id="newLecCard" class="row container-fluid">
@@ -38,20 +40,46 @@
     -->
 </body>
 <script>
-    let imageLink = ['bookImages/Let_us_C.PNG','bookImages/Let_us_C_soln.PNG', 'bookImages/Exploring_C.PNG', 'bookImages/Test_your_C_skills.PNG', 'bookImages/Problem_Solving_and_Problem_Design_in_C.PNG', 'bookImages/C_Notes_For_Professionals.PNG'];
-    let driveLink = ['https://drive.google.com/file/d/1-98XuNGSOcUbq0SMiefNGAk8ralGI8Kf/view?usp=sharing', 'https://drive.google.com/file/d/1olFfXHG-YkxVuJrV5QCUuHtk4UJfLGpA/view?usp=sharing','https://drive.google.com/file/d/1JDSlKadCrXs8ph2rIr-KNxjuesJrJaFu/view?usp=sharing', 'https://drive.google.com/file/d/1A6fMgIwwQ-xtpE0lw6ujEJsBv76Cb5sS/view?usp=sharing','https://drive.google.com/file/d/1xQ5gPd9dpA1d0gxz4ffHLPLgd2o4hRnj/view?usp=sharing','https://drive.google.com/file/d/1QPiUx3kzXjqr7wPvJkCAp3W3rmJgmeag/view?usp=sharing'];
+    //Book Card
+
+    let imageLink = ['bookImages/Let_us_C.PNG', 'bookImages/Let_us_C_soln.PNG', 'bookImages/Exploring_C.PNG', 'bookImages/Test_your_C_skills.PNG', 'bookImages/Problem_Solving_and_Problem_Design_in_C.PNG', 'bookImages/C_Notes_For_Professionals.PNG'];
+    let driveLink = ['https://drive.google.com/file/d/1-98XuNGSOcUbq0SMiefNGAk8ralGI8Kf/view?usp=sharing', 'https://drive.google.com/file/d/1olFfXHG-YkxVuJrV5QCUuHtk4UJfLGpA/view?usp=sharing', 'https://drive.google.com/file/d/1JDSlKadCrXs8ph2rIr-KNxjuesJrJaFu/view?usp=sharing', 'https://drive.google.com/file/d/1A6fMgIwwQ-xtpE0lw6ujEJsBv76Cb5sS/view?usp=sharing', 'https://drive.google.com/file/d/1xQ5gPd9dpA1d0gxz4ffHLPLgd2o4hRnj/view?usp=sharing', 'https://drive.google.com/file/d/1QPiUx3kzXjqr7wPvJkCAp3W3rmJgmeag/view?usp=sharing'];
 
     imageLink.forEach(function (element, index) {
         let newBookCard = document.getElementById("newBookCard");
         newBookCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-image: url('bg/bg2.jpeg'); background-size: cover;">
-        <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
-        <div class="card-body my-3 ">
-            
-            <a href="${driveLink[index]}"
+            <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
+            <div class="card-body my-3 ">
+                
+                <a href="${driveLink[index]}"
                 class="btn btn-primary" style="font-family: monospace;" target="_blank">Download Now</a>
-        </div>
-    
-    </div>`;
+                </div>
+                
+                </div>`;
+    });
+    //Lec Card
+    let lecImageLink = ['lecImages/learninglad.jpeg', 'lecImages/jenny.webp', 'lecImages/neso.jpeg', 'lecImages/cwh.jpeg', 'lecImages/saurabhshukla.jpeg'];
+    let lecDriveLink = ['https://youtube.com/playlist?list=PLfVsf4Bjg79Cu5MYkyJ-u4SyQmMhFeC1C', 'https://youtube.com/playlist?list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S', 'https://youtube.com/playlist?list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR', 'https://youtube.com/playlist?list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR', 'https://youtube.com/playlist?list=PLe_7x5eaUqtWp9fvsxhC4XIkoR3n5A-sF'];
+
+
+    lecImageLink.forEach(function (element, index) {
+        let newLecCard = document.getElementById("newLecCard");
+        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%;background-color: white; background-size: cover;">
+            <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
+            <div class="card-body my-3 ">
+                
+                <a href="${lecDriveLink[index]}"
+                class="btn btn-primary" style="font-family: monospace;" target="_blank"><center>Watch Now</center></a>
+                </div>
+                
+                </div>`;
+
+
+
+
+
+
+
     })
 </script>
 

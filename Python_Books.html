@@ -53,6 +53,25 @@
     
     </div>`;
     })
+
+
+     //Lec Card
+     let lecImageLink = ['lecImages/harshit.jpeg', 'lecImages/cwh.jpeg'];
+    let lecDriveLink = ['https://youtube.com/playlist?list=PLwgFb6VsUj_lQTpQKDtLXKXElQychT_2j','https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME'];
+
+    lecImageLink.forEach(function (element, index) {
+        let newLecCard = document.getElementById("newLecCard");
+        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%;background-color: white; background-size: cover;">
+            <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
+            <div class="card-body my-3 ">
+                
+                <a href="${lecDriveLink[index]}"
+                class="btn btn-primary" style="font-family: monospace;" target="_blank"><center>Watch Now</center></a>
+                </div>
+                
+                </div>`;
+
+    })
 </script>
 
 </html>
