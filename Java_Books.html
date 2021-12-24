@@ -53,6 +53,25 @@
     
     </div>`;
     })
+
+        //Lec Card
+    let lecImageLink = ['lecImages/learninglad.jpeg','lecImages/neso.jpeg', 'lecImages/cwh.jpeg', 'lecImages/progknow.jpeg','lecImages/saurabhshukla.jpeg','lecImages/apnacollege.jpeg'];
+    let lecDriveLink = ['https://youtube.com/playlist?list=PLfVsf4Bjg79Dgw4n_nR3C8Ozqek7DaZFQ','https://youtube.com/playlist?list=PLBlnK6fEyqRjKA_NuK9mHmlk0dZzuP1P5','https://youtube.com/playlist?list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q','https://youtube.com/playlist?list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al','https://www.youtube.com/channel/UCGR3vMYA20JJDQvGFccujdA','https://youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop'];
+
+
+    lecImageLink.forEach(function (element, index) {
+        let newLecCard = document.getElementById("newLecCard");
+        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%;background-color: white; background-size: cover;">
+            <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
+            <div class="card-body my-3 ">
+                
+                <a href="${lecDriveLink[index]}"
+                class="btn btn-primary" style="font-family: monospace;" target="_blank"><center>Watch Now</center></a>
+                </div>
+                
+                </div>`;
+                
+    })
 </script>
 
 </html>
