@@ -25,7 +25,7 @@
 
 <body>
     <div>
-        <center><h1 style="font-family: 'Courier New', Courier, monospace; margin: 10px;">Gallery</h1></center>
+        <center><h1 style="font-family: 'Courier New', Courier, monospace; margin: 10px;" id="font1">Gallery</h1></center>
         <hr>
         <div id="gallerydiv" style="float:left; margin: 2px;"></div>
     </div>
@@ -39,5 +39,19 @@
     picArr.forEach(function (element){
         divElem.innerHTML += `<a href=${element}><img src=${element}></a>`;
     })
+    const theme = JSON.parse(localStorage.getItem('theme'));
+    const font1 = document.getElementById('font1');
+    
+    
+    if(theme.darkmode === true){
+        document.body.style.backgroundImage = 'url("bg/darkbg8.jpeg")';
+        document.body.style.backgroundSize = 'cover';
+        font1.style.color = 'white';
+    }
+    else{
+        document.body.style.backgroundImage = 'url("bg/bg7.jpeg")';
+        document.body.style.backgroundSize = 'cover';
+        font1.style.color = 'orange';
+    }
 </script>
 </html>

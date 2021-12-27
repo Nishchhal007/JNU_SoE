@@ -12,14 +12,14 @@
 
 <body style="background-image: url('bg/bg7.jpeg'); background-size: cover;">
 
-    <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;">
+    <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;" id="font1">
         Java
         Programming Books</h3>
 
     <div id="newBookCard" class="row container-fluid">
 
     </div>
-    <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;">
+    <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;" id="font2">
         Java Programming Lectures</h3>
     <div id="newLecCard" class="row container-fluid">
 
@@ -43,7 +43,7 @@
 
     imageLink.forEach(function (element, index) {
         let newBookCard = document.getElementById("newBookCard");
-        newBookCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-image: url('bg/bg9.jpeg'); background-size: cover;">
+        newBookCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-size: cover;" id=cardbook${index}>
         <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
         <div class="card-body my-3 ">
             
@@ -61,7 +61,7 @@
 
     lecImageLink.forEach(function (element, index) {
         let newLecCard = document.getElementById("newLecCard");
-        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%;background-image: url('bg/bg9.jpeg'); background-size: cover;">
+        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-size: cover;" id=cardlec${index}>
             <img src="${element}" style="height: 14.2rem;width: 13.5rem; border-radius: 3cm;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
             <div class="card-body my-3 ">
                 
@@ -72,6 +72,30 @@
                 </div>`;
                 
     })
+    const theme = JSON.parse(localStorage.getItem('theme'));
+    const font1 = document.getElementById('font1');
+    const font2 = document.getElementById('font2');
+    
+    if(theme.darkmode === true){
+        document.body.style.backgroundImage = 'url("bg/darkbg5.jpeg")';
+        document.body.style.backgroundSize = 'cover';
+        font1.style.color = 'white';
+        font2.style.color = 'white';
+        lecImageLink.forEach(function (element,index){
+            const lecCard = document.getElementById(`cardlec${index}`);
+            lecCard.style.backgroundImage = "url('bg/darkbg2.jpeg')";
+        })
+        imageLink.forEach(function (element,index){
+            const bookCard = document.getElementById(`cardbook${index}`);
+            bookCard.style.backgroundImage = "url('bg/darkbg2.jpeg')";
+        })
+    }
+    else{
+        document.body.style.backgroundImage = 'url("bg/bg7.jpeg")';
+        document.body.style.backgroundSize = 'cover';
+        font1.style.color = 'orange';
+        font2.style.color = 'orange';
+    }
 </script>
 
 </html>
