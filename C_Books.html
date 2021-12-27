@@ -10,9 +10,9 @@
     <title>C BOOKS</title>
 </head>
 
-<body style="background-image: url('bg/bg7.jpeg'); background-size: cover;">
+<body>
 
-    <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;">
+    <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;" id="font1">
         C
         Programming Books</h3>
 
@@ -21,7 +21,7 @@
     </div>
 
 
-    <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;">
+    <h3 style="font-family: 'Courier New', Courier, monospace; padding: 2% 2%; font-weight: bold; font-size: 1.4rem;" id="font2">
         C Programming Lectures</h3>
     <div id="newLecCard" class="row container-fluid">
 
@@ -38,16 +38,16 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
-</body>
+</body style="background-image: url('bg/bg7.jpeg'); background-size: cover;">
 <script>
     //Book Card
 
-    let imageLink = ['bookImages/Let_us_C.PNG', 'bookImages/Let_us_C_soln.PNG', 'bookImages/Exploring_C.PNG', 'bookImages/Test_your_C_skills.PNG', 'bookImages/Problem_Solving_and_Problem_Design_in_C.PNG', 'bookImages/C_Notes_For_Professionals.PNG'];
-    let driveLink = ['https://drive.google.com/file/d/1-98XuNGSOcUbq0SMiefNGAk8ralGI8Kf/view?usp=sharing', 'https://drive.google.com/file/d/1olFfXHG-YkxVuJrV5QCUuHtk4UJfLGpA/view?usp=sharing', 'https://drive.google.com/file/d/1JDSlKadCrXs8ph2rIr-KNxjuesJrJaFu/view?usp=sharing', 'https://drive.google.com/file/d/1A6fMgIwwQ-xtpE0lw6ujEJsBv76Cb5sS/view?usp=sharing', 'https://drive.google.com/file/d/1xQ5gPd9dpA1d0gxz4ffHLPLgd2o4hRnj/view?usp=sharing', 'https://drive.google.com/file/d/1QPiUx3kzXjqr7wPvJkCAp3W3rmJgmeag/view?usp=sharing'];
+    const imageLink = ['bookImages/Let_us_C.PNG', 'bookImages/Let_us_C_soln.PNG', 'bookImages/Exploring_C.PNG', 'bookImages/Test_your_C_skills.PNG', 'bookImages/Problem_Solving_and_Problem_Design_in_C.PNG', 'bookImages/C_Notes_For_Professionals.PNG'];
+    const driveLink = ['https://drive.google.com/file/d/1-98XuNGSOcUbq0SMiefNGAk8ralGI8Kf/view?usp=sharing', 'https://drive.google.com/file/d/1olFfXHG-YkxVuJrV5QCUuHtk4UJfLGpA/view?usp=sharing', 'https://drive.google.com/file/d/1JDSlKadCrXs8ph2rIr-KNxjuesJrJaFu/view?usp=sharing', 'https://drive.google.com/file/d/1A6fMgIwwQ-xtpE0lw6ujEJsBv76Cb5sS/view?usp=sharing', 'https://drive.google.com/file/d/1xQ5gPd9dpA1d0gxz4ffHLPLgd2o4hRnj/view?usp=sharing', 'https://drive.google.com/file/d/1QPiUx3kzXjqr7wPvJkCAp3W3rmJgmeag/view?usp=sharing'];
 
     imageLink.forEach(function (element, index) {
         let newBookCard = document.getElementById("newBookCard");
-        newBookCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-image: url('bg/bg2.jpeg'); background-size: cover;">
+        newBookCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-size: cover;" id = cardbook${index}>
             <img src="${element}" style="height: 14.2rem;width: 13.5rem;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
             <div class="card-body my-3 ">
                 
@@ -58,13 +58,13 @@
                 </div>`;
     });
     //Lec Card
-    let lecImageLink = ['lecImages/learninglad.jpeg', 'lecImages/jenny.webp', 'lecImages/neso.jpeg', 'lecImages/cwh.jpeg', 'lecImages/saurabhshukla.jpeg'];
-    let lecDriveLink = ['https://youtube.com/playlist?list=PLfVsf4Bjg79Cu5MYkyJ-u4SyQmMhFeC1C', 'https://youtube.com/playlist?list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S', 'https://youtube.com/playlist?list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR', 'https://youtube.com/playlist?list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR', 'https://youtube.com/playlist?list=PLe_7x5eaUqtWp9fvsxhC4XIkoR3n5A-sF'];
+    const lecImageLink = ['lecImages/learninglad.jpeg', 'lecImages/jenny.webp', 'lecImages/neso.jpeg', 'lecImages/cwh.jpeg', 'lecImages/saurabhshukla.jpeg'];
+    const lecDriveLink = ['https://youtube.com/playlist?list=PLfVsf4Bjg79Cu5MYkyJ-u4SyQmMhFeC1C', 'https://youtube.com/playlist?list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S', 'https://youtube.com/playlist?list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR', 'https://youtube.com/playlist?list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR', 'https://youtube.com/playlist?list=PLe_7x5eaUqtWp9fvsxhC4XIkoR3n5A-sF'];
 
 
     lecImageLink.forEach(function (element, index) {
         let newLecCard = document.getElementById("newLecCard");
-        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%;background-image: url('bg/bg2.jpeg'); background-size: cover;">
+        newLecCard.innerHTML += `<div class="card" style="width: 15rem; margin: 2% 2%; padding: 1% 1%; background-size: cover;" id= cardlec${index}>
             <img src="${element}" style="height: 14.2rem;width: 13.5rem; border-radius: 3cm;" class="card-img-top" alt=${element.slice(0, element.length - 4)}>
             <div class="card-body my-3 ">
                 
@@ -75,6 +75,30 @@
                 </div>`;
                 
     })
+    const theme = JSON.parse(localStorage.getItem('theme'));
+    const font1 = document.getElementById('font1');
+    const font2 = document.getElementById('font2');
+    
+    if(theme.darkmode === true){
+        document.body.style.backgroundImage = 'url("bg/darkbg4.jpeg")';
+        document.body.style.backgroundSize = 'cover';
+        font1.style.color = 'white';
+        font2.style.color = 'white';
+        lecImageLink.forEach(function (element,index){
+            const lecCard = document.getElementById(`cardlec${index}`);
+            lecCard.style.backgroundImage = "url('bg/darkbg2.jpeg')";
+        })
+        imageLink.forEach(function (element,index){
+            const bookCard = document.getElementById(`cardbook${index}`);
+            bookCard.style.backgroundImage = "url('bg/darkbg2.jpeg')";
+        })
+    }
+    else{
+        document.body.style.backgroundImage = 'url("bg/bg7.jpeg")';
+        document.body.style.backgroundSize = 'cover';
+        font1.style.color = 'orange';
+        font2.style.color = 'orange';
+    }
 </script>
 
 </html>
