@@ -98,6 +98,14 @@
         document.body.style.backgroundSize = 'cover';
         font1.style.color = 'orange';
         font2.style.color = 'orange';
+        lecImageLink.forEach(function (element,index){
+            const lecCard = document.getElementById(`cardlec${index}`);
+            lecCard.style.backgroundImage = "url('bg/bg2.jpeg')";
+        })
+        imageLink.forEach(function (element,index){
+            const bookCard = document.getElementById(`cardbook${index}`);
+            bookCard.style.backgroundImage = "url('bg/bg2.jpeg')";
+        })
     }
 </script>
 
